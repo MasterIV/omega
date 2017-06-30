@@ -1,5 +1,6 @@
 package com.drawandupdate.omega;
 
+import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -9,7 +10,7 @@ public class TestController {
 
     @RequestMapping
     @ResponseBody
-    public String index() {
-        return "Hello world";
+    public TestPojo index() {
+        return new TestPojo("hello", "world");
     }
 }
