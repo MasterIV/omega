@@ -8,13 +8,6 @@ import java.util.Map;
 
 @Controller
 public class TestController {
-
-    @RequestMapping("/")
-    @ResponseBody
-    public TestPojo index() {
-        return new TestPojo("hello", "world");
-    }
-
     @RequestMapping("/foo")
     public String templatetest(Map<String, Object> model) {
         model.put("world", "Schinken");
